@@ -12,5 +12,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  public resetName(): void {
+    this.name = '';
+  }
 }

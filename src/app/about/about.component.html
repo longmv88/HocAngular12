@@ -1,3 +1,24 @@
 <p>about works!</p>
 
 {{name}}
+
+<input type="text" value="{{name}}">  value="{{name}} <br />
+cach 2
+<br />
+<input [value]="name" title="day la name">
+<br />
+Cach 3
+<input [title] = "'day la ' + name">
+
+<h2>TWO WAY BINDING DATA</h2> <br />
+<input type="text" [(ngModel)]="name"/>
+<br />
+<div>
+<button title="Reset tên" (click)="resetName()">Click vào đây để reset tên</button>
+</div>
+<br />
+<h2>Tên của ban là {{name}}</h2>
+
+<br />
+
+<button type="button"> fdsfs</button>
