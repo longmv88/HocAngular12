@@ -5,15 +5,36 @@
 
 <h2>so tuoi cua ban la {{age}}</h2>
 <input [(ngModel)]="age">
+
+<h2>ngFor</h2> <br />
+<div *ngFor="let trai of traiCay, let i = index">
+    <li>{{i+1}}.{{trai}}</li>
+
+</div>
+
 <!-- <h2 *ngIf="age <= 15"> ban <= 15 tuoi ban qua tre</h2>
 <h2 *ngIf="age > 15"> ban lon hon > 15 tuoi ban qua gia</h2> -->
 </div>
 <br /> 
-<div *ngIf = "age <= 15; then tre; else gia"> dk </div>
+<div *ngIf = "age <= 15; then tre; else gia", class = test2> DIEU KIEN CHO EN-TEMPLATE </div>
 <div>
-     <ng-template #tre> <h2>ban it hon 15 tuoi</h2></ng-template>
+     <ng-template #tre> <h2 class = test2>ban it hon 15 tuoi</h2></ng-template>
     <ng-template #gia> ban nhieu hon 15 tuoi</ng-template>
 </div>
+
+<h2> TABLE KET HOP ngFor</h2>
+<table class = "table1">
+  <tr class = "nenden">
+     <th *ngFor= "let danh of danhmuc">{{danh}}</th>
+  </tr>
+  <tr *ngFor= "let trai of traiCay2, let i = index">
+    <td>{{i+1}}</td> 
+    <td>{{trai.ten}}</td>
+    <td class ="right"> <span [ngClass]= "{'lonhon50': trai.gia < 13}">{{trai.gia}}</span></td>
+    <td>{{trai.canNang}}</td>
+    <td><span *ngIf= "trai.sale">Dang Sale</span></td>
+  </tr> 
+</table>
    
 
     
