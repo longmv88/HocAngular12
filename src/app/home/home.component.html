@@ -4,6 +4,16 @@
 <h2> Chào bạn {{name}}</h2>
 
 <h2>so tuoi cua ban la {{age}}</h2>
-<h2 *ngIf="age <= 15"> ban <= 15 tuoi ban qua tre</h2>
-<h2 *ngIf="age > 15"> ban lon hon > 15 tuoi ban qua gia</h2>
+<input [(ngModel)]="age">
+<!-- <h2 *ngIf="age <= 15"> ban <= 15 tuoi ban qua tre</h2>
+<h2 *ngIf="age > 15"> ban lon hon > 15 tuoi ban qua gia</h2> -->
 </div>
+<br /> 
+<div *ngIf = "age <= 15; then tre; else gia"> dk </div>
+<div>
+     <ng-template #tre> <h2>ban it hon 15 tuoi</h2></ng-template>
+    <ng-template #gia> ban nhieu hon 15 tuoi</ng-template>
+</div>
+   
+
+    
