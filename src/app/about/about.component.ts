@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-about',
@@ -8,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
   public name: string = 'LongAbout';
   public loginName = 'admin';
-  constructor() { }
+  public counter = 0;
+  public counterBinhPhuong = 0;
+  // public counter = 0;
+  // public counterBinhPhuong = 0;
+  // constructor(private common: CommonService) { };
+  constructor(private common: CommonService) { };
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+  // this.counter = this.common.counter;
+  //  this.counterBinhPhuong = this.common.mu2(this.counter);
+  //  this.common.counter++;
+  this.counter = this.common.counter;
+   this.counterBinhPhuong = this.common.mu2(this.counter);
+   this.common.counter++;
   }
   public resetName(): void {
     this.name = '';

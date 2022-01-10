@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-home',
@@ -28,8 +29,9 @@ export class HomeComponent implements OnInit {
                                   
 ]  
 
-
-  constructor() { }
+  public counter = 0;
+  public counterBinhPhuong = 0;
+  constructor(private common: CommonService) { }
  public changeCity(event: any): void {
    console.log('event', event.target.value);
    const city = event.target.value;
@@ -48,6 +50,10 @@ export class HomeComponent implements OnInit {
    
  }
  public ngOnInit(): void {
+   this.counter = this.common.counter;
+   this.counterBinhPhuong = this.common.mu2(this.counter);
+   this.common.counter++;
+
    console.log('trai cay =', this.traiCay);
    console.log('trai cay =', this.traiCay2);
   }
