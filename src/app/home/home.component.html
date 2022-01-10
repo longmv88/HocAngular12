@@ -29,12 +29,42 @@
   </tr>
   <tr *ngFor= "let trai of traiCay2, let i = index">
     <td>{{i+1}}</td> 
-    <td>{{trai.ten}}</td>
-    <td class ="right"> <span [ngClass]= "{'lonhon50': trai.gia < 13}">{{trai.gia}}</span></td>
+    <td>{{trai.ten |lowercase}}</td>
+    <td class ="right"> <span [ngClass]= "{'lonhon50': trai.gia < 13}">{{trai.gia | currency:'VND':'symbol':'1.2-2'}}</span></td>
     <td>{{trai.canNang}}</td>
-    <td><span *ngIf= "trai.sale">Dang Sale</span></td>
+    <td><span *ngIf= "trai.sale">{{trai.sale | onSale | uppercase}}</span></td>
   </tr> 
 </table>
    
+<h2> THỰC HÀNH COMBOBOX TỈNH/THÀNH PHỐ -- QUẬN HUYỆN</h2>
 
-    
+<div>
+Tỉnh/Thành phố
+<select id="city" (change)="changeCity($event)">
+  <option *ngFor= 'let data of vietnam' value= "{{data.city}}"> {{data.city}} </option>>
+</select> 
+Quận/ Huyện<select name='district' id="district" title = "Bạn chưa chọn Tỉnh/ Thành Phố">
+  <option *ngFor= 'let data3 of district' value= "{{data3}}"> {{data3}} </option>
+</select>
+
+
+</div>
+<br />
+----
+<br />
+.
+.
+<br />
+<br />
+.
+.
+<br />
+.
+
+
+
+
+----
+<br />
+----
+<br />

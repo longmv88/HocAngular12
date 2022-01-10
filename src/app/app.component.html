@@ -1,9 +1,18 @@
+<!-- <h1>Welcome to angular 12</h1>
+<nav>
+    <ul>
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    </ul>
+</nav>
 
-<h1>App Routing Cộng Hòa Xã Hội</h1>
-<br />
+<router-outlet></router-outlet> -->
 
-<!-- <router-outlet></router-outlet> -->
-
-<app-home></app-home>
-
-<app-about></app-about>
+<ul [ngSwitch]="loginName">
+    <li *ngSwitchCase="'user'">
+        <app-about></app-about>
+    </li>
+    <li *ngSwitchCase="'admin'">
+       <app-login></app-login>
+    </li>
+</ul>

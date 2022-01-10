@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   public name: string = 'LongAbout';
-
+  public loginName = 'admin';
   constructor() { }
 
   ngOnInit(): void {

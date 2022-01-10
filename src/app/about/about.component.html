@@ -1,5 +1,14 @@
 <p>about works!</p>
 
+<ul [ngSwitch]="loginName">
+    <li *ngSwitchCase="'user'">
+        <app-about></app-about>
+    </li>
+    <li *ngSwitchCase="'admin'">
+       <h2> <-----------Đây là trang Admin-----></h2>
+    </li>
+</ul>
+
 {{name}}
 
 <input type="text" value="{{name}}">  value="{{name}} <br />
