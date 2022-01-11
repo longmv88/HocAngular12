@@ -8,6 +8,8 @@ export class CommonService {
   public mu2(n: number): number {
     return n * n;
   }
-
+  public submitData(data: any): void {
+   console.log(data);
+  }
   constructor() { }
 }
