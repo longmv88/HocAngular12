@@ -13,8 +13,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   public submitForm(): void {
-    // console.log('Submit form = ', + this.name);
-    this.common.submitData({name: this.name,age: 14});
+    console.log('Submit form = ' + this.name);
+    // this.common.submitData({name: this.name,age: 14});
   }
-
 }
