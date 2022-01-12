@@ -1,12 +1,13 @@
 <p>login works!</p>
 <br />
-<form (ngSubmit)="submitForm()">
+<!-- <form (ngSubmit)="submitForm()"> -->
+<form>
     Nhập Tên 
-    <input type="text" [(ngModel)]="name"[ngModelOptions]="{standalone: true}"/>
+    <input type="text" [(ngModel)]="name" [ngModelOptions]= "{standalone: true}"/>
     <br />
-    <!-- <button (click)="submitForm()">Submit</button> -->
-    cách 2 <br />
-    <button>Submit2</button>
+    <button (click)="submitForm()">Submit</button>
+    <!-- cách 2 <br />
+    <button>Submit2</button> -->
 </form>
 
 <br />
@@ -15,6 +16,7 @@
     <ul>
         <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
         <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/api" routerLinkActive="active">API</a></li>
         
     </ul>
 </nav>

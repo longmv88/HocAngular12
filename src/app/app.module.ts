@@ -9,6 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { OnSalePipe } from './on-sale.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ApiComponent } from './api/api.component';
+import { HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -19,12 +23,18 @@ import { LoginComponent } from './login/login.component';
     OnSalePipe,
     PageNotFoundComponent,
     LoginComponent,
-   
+    ReactiveFormComponent,
+    ApiComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
