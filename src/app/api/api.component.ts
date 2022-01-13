@@ -11,7 +11,7 @@ export class ApiComponent implements OnInit {
   constructor(private httpservicesService: HttpservicesService) { }
 
   public ngOnInit(): void {
-    this.httpservicesService.getComments().subscribe((data) => {
+    this.httpservicesService.getComments("/User").subscribe((data) => {
       console.log('data', data);
     });
   }

@@ -13,6 +13,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApiComponent } from './api/api.component';
 import { HttpClientModule} from '@angular/common/http';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { HttpClientModule} from '@angular/common/http';
     LoginComponent,
     ReactiveFormComponent,
     ApiComponent,
+    PostComponent,
     
   ],
   imports: [
